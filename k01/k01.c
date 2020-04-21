@@ -4,13 +4,13 @@
 #include <math.h>
 
 extern double ave_online(double val,double ave,int N);
-extern double var_online(double val,double var,double a,int N);
+extern double var_online(double val,double var,double ave,double ave2,int N);
 
 int main(void){
 
-    double a;
-    double var;
-    double ave;
+    double ave2=0;
+    double var=0;
+    double ave=0;
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
@@ -29,13 +29,14 @@ int main(void){
     }
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
-        N=N+1;
+    N++;
+        var=var_online(val,var,ave,ave2,N);
         ave=ave_online(val,ave,N);
-        var=var_online(val,var,a,N);
-        a=val;
-
+        ave2=ave_online(pow(val,2),ave2,N);
+        
     }
-    printf("average:%lf\nvariance:%lf\n",ave,var);
+    printf("average:%lf\nvariance:%lf\nsuitei average:%lf\nsuitei variance%lf\n",ave,var,ave,(N*var)/(N-1));
+    
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
@@ -48,12 +49,12 @@ int main(void){
 }
 
 extern double ave_online(double val,double ave,int N){
-   ave=(((N-1)*ave)/N)+(val/N);
-   return(ave);
+   ave=((N-1)*ave)/N+val/N;
+   return ave;
 }
 
-extern double var_online(double val,double var,double a,int N){
-    var=((((N-1)*a*a)/N)+((val*val)/N))-pow((((a*(N-1))/N)+(val/N)),2);
-    return(var);
+extern double var_online(double val,double var,double ave,double ave2,int N){
+    var=((N-1)*ave2)/N+pow(val,2)/N-pow(((N-1)*ave)/N+val/N,2);
+    return var;
 }
 
