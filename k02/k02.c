@@ -4,7 +4,7 @@
 #include <math.h>
 
 extern double p_stdnorm(double z);
-
+double z;
 int main(void)
 {
     double val;
@@ -12,7 +12,10 @@ int main(void)
     char buf[256];
     FILE* fp;
     double L1=1,L2=1;
-
+    double h_a=170.8,h_b=169.7,b_a=pow(5.43,2),b_b=pow(5.5,2);
+    double max_val,min_val;
+    double z_a,z_b;
+    
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
     fname[strlen(fname)-1] = '\0';
@@ -27,12 +30,18 @@ int main(void)
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
 
+        z_a=(val-h_a)/b_a;
+        z_b=(val-h_b)/b_b;
 
-    
+       L1=L1*p_stdnorm(z_a);
 
+       L2=L2*p_stdnorm(z_b);
 
 
     }
+
+max_val=L1;
+min_val=L2;
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
@@ -49,6 +58,8 @@ int main(void)
 
 double p_stdnorm(double z)
 {
-    return 1/sqrt(2*M_PI) * exp(-z*z/2);
+    double ret;
+    ret=1/sqrt(2*3.1416)*exp(-z*z/2);
+    return ret;
 }
 
