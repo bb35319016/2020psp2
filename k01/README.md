@@ -47,4 +47,7 @@ population variance (estimated)：
 
 ## 修正履歴
 
-説明は「かきくけこ」だ！
+- ソースコードの説明をこのReadme.mdに書いてください．
+- var_onlineに引数varは不要な気がします．
+- プロトタイプ宣言にはexternをつけますが，関数本体にはつけません．
+
