@@ -3,6 +3,8 @@
 #include <string.h>
 #include <math.h>
 
+#define myPI (4*atan(1))
+
 extern double p_stdnorm(double z);
 double z;
 int main(void)
@@ -59,7 +61,7 @@ min_val=L2;
 double p_stdnorm(double z)
 {
     double ret;
-    ret=1/sqrt(2*3.1416)*exp(-z*z/2);
+    ret=1/sqrt(2*myPI)*exp(-z*z/2);
     return ret;
 }
 
