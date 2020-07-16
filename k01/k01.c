@@ -4,7 +4,7 @@
 #include <math.h>
 
 extern double ave_online(double val,double ave,int N);
-extern double var_online(double val,double var,double ave,double ave2,int N);
+extern double var_online(double val,double ave,double ave2,int N);
 
 int main(void){
 
@@ -30,7 +30,7 @@ int main(void){
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
     N++;
-        var=var_online(val,var,ave,ave2,N);
+        var=var_online(val,ave,ave2,N);
         ave=ave_online(val,ave,N);
         ave2=ave_online(pow(val,2),ave2,N);
         
@@ -48,12 +48,13 @@ int main(void){
 
 }
 
-extern double ave_online(double val,double ave,int N){
+double ave_online(double val,double ave,int N){
    ave=((N-1)*ave)/N+val/N;
    return ave;
 }
 
-extern double var_online(double val,double var,double ave,double ave2,int N){
+double var_online(double val,double ave,double ave2,int N){
+    double var;
     var=((N-1)*ave2)/N+pow(val,2)/N-pow(((N-1)*ave)/N+val/N,2);
     return var;
 }
