@@ -29,8 +29,15 @@ c32:Nに1を足す
 c33:varにvar_onlineでの計算結果を代入
 c34:aveにave_onlineでの計算結果を代入
 c35:valの二乗の平均の計算
-
 c50~:平均を求める計算
 c55~:分散を求める計算
+
+## 入出力結果
+
+```
+Likelihood for A：
+Likelihood for B：
+```
+
 ## 修正履歴
 
