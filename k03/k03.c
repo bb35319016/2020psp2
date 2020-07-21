@@ -8,6 +8,7 @@
 #include <time.h>
 #define RAND_SEED ((unsigned) time(NULL))
 #endif
+#define mypi (4*atan(1))
 
 extern double r_unif(void);
 extern double r_stdnorm(void);
@@ -19,8 +20,13 @@ int main(int argc, char* argv[])
     double sigma;
     int i;
     double dummy;
-
-
+if(argc<4)
+{
+    return 1;
+}
+sscanf(argv[1], "%lf", &mu);
+sscanf(argv[2], "%lf", &sigma);
+sscanf(argv[3], "%d", &num_dummy);
 
 
 
@@ -31,9 +37,11 @@ int main(int argc, char* argv[])
     printf("============================================\n");
 
     srand(RAND_SEED);
-    for(  ){
+    for( i=1;i<=num_dummy;i++ )
+    {
         /* r_stdnormを使って，1人のデータを捏造 */
-        dummy =   ;
+        dummy =  r_stdnorm()*sigma + mu ;
+        
         printf("%5.2lf\n",dummy);
     }
 
@@ -47,5 +55,5 @@ double r_unif(void)
 
 double r_stdnorm(void)
 {
-    return sqrt( -2.0*log(r_unif()) ) * sin( 2.0*M_PI*r_unif() );
+    return sqrt( -2.0*log(r_unif()) ) * sin( 2.0*mypi*r_unif() );
 }
