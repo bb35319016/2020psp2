@@ -1,6 +1,6 @@
 # 課題1 レポート
 
-aa83988848 薗田光太郎
+bb35319016　河内元希
 
 ## 課題
 
@@ -43,18 +43,22 @@ aa83988848 薗田光太郎
 
 ## ソースコードの説明
 
-あいうえお
+c6,7:関数の宣言
+
+c11~18:各変数の宣言
+
+c20~37:ファイルを取り込んで計算
+
+c38:計算結果を出力
 
 ## 入出力結果
 
-```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
-sample mean：
-sample variance：
-population mean (estimated)：
-population variance (estimated)：
-```
+average:173.888750
+variance:25.361711
+suitei average:173.888750
+suitei variance28.984812
 
 ## 修正履歴
 
