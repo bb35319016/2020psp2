@@ -52,14 +52,14 @@ c20~37:ファイルを取り込んで計算
 c38:計算結果を出力
 
 ## 入出力結果
-
+```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
 average:173.888750
 variance:25.361711
 suitei average:173.888750
 suitei variance28.984812
-
+```
 ## 修正履歴
 
 - ソースコードの説明をこのReadme.mdに書いてください．
@@ -70,3 +70,6 @@ suitei variance28.984812
 - このレポートの最初の部分は自分の学籍番号, 氏名にしてください. 
 - ソースコードの説明を書いてください. 
 - 出力結果を貼り付けてください. 
+
+[comment #20200721 sonoda]
+- 課題1の完了を確認しました．
