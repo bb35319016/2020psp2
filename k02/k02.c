@@ -15,8 +15,8 @@ int main(void)
     FILE* fp;
     double L1=1,L2=1;
     double h_a=170.8,h_b=169.7,b_a=pow(5.43,2),b_b=pow(5.5,2);
-    double max_val,min_val;
     double z_a,z_b;
+    
     
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
@@ -42,16 +42,16 @@ int main(void)
 
     }
 
-max_val=L1;
-min_val=L2;
+
+
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",max_val);
-    printf("L_B: %f\n",min_val);
+    printf("L_A: %f\n",L1);
+    printf("L_B: %f\n",L2);
 
     return 0;
 
