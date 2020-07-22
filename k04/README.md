@@ -21,7 +21,7 @@ c82~110:IDを聞き対応するIDがあればデータを出力、無ければ�
 
 
 ## 入出力結果
-
+```
 input the filename of sample:../sample/heights.csv
 the filename of sample: ../sample/heights.csv
 input the filename of sample ID ?:../sample/IDs.csv
@@ -40,6 +40,8 @@ the filename of sample ID:../sample/IDs.csv
 Which ID's date do you want? :35319016
 ---
 NO date
+```
+
 
 例えば，ID 45313125のデータを調べたいとき，
 
@@ -64,4 +66,12 @@ No data
 ```
 
 ## 修正履歴
+[comment #20200722]
+- データのスペルを間違えています. date -> data
+- l.13 #define をつかいましょう.  
+#define NUM 15 のように. 
+ただ15というのは何の数字でしょうか. heights.csvは15行ありますが, データは14人分なので14を使った方が良いかと思います. 
+- iの初期値はゼロなので, l.36からのwhileループ内の [i-1] は負の値になってしまうと思います.  
+ファイルの1行目を飛ばしたかったのでしょうか. whileに入る前に fgets を一回行えば, whileの中では2行目以降の処理ができると思います. 
+- インデントは揃えましょう
 
