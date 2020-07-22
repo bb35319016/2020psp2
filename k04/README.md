@@ -1,6 +1,6 @@
 # 課題4 レポート
 
-aa83988848 薗田光太郎
+bb35319016 河内元希
 
 ## 課題
 
@@ -12,8 +12,34 @@ aa83988848 薗田光太郎
 
 ## ソースコードの説明
 
+c6~11:ID、性別、身長の構造体を宣言
+
+c24~80:ファイルを読み込みそれぞれ格納
+
+c82~110:IDを聞き対応するIDがあればデータを出力、無ければ”No data"と出力
+
+
 
 ## 入出力結果
+
+input the filename of sample:../sample/heights.csv
+the filename of sample: ../sample/heights.csv
+input the filename of sample ID ?:../sample/IDs.csv
+the filename of sample ID:../sample/IDs.csv
+Which ID's date do you want? :45313125
+---
+ID : 45313125
+gender : Female
+heights : 152.40
+
+ーーーーーーーーーーーーー
+input the filename of sample:../sample/heights.csv
+the filename of sample: ../sample/heights.csv
+input the filename of sample ID ?:../sample/IDs.csv
+the filename of sample ID:../sample/IDs.csv
+Which ID's date do you want? :35319016
+---
+NO date
 
 例えば，ID 45313125のデータを調べたいとき，
 
