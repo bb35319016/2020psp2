@@ -10,7 +10,7 @@ struct data
     double heights;
 };
 
-int num=15;
+#define NUM 14
 
 int main(void)
 {
@@ -19,7 +19,7 @@ int main(void)
     FILE* fp;
     int i=0, j=0, k=0, ID, gen, ID2;
     double hei;
-    struct data sample[num];
+    struct data sample[NUM];
 
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
@@ -33,12 +33,14 @@ int main(void)
         exit(EXIT_FAILURE);
     }
     
+    fgets(buf,sizeof(buf),fp);
+    
     while(fgets(buf,sizeof(buf),fp)!=NULL)
     {
         sscanf(buf,"%d,%lf",&gen,&hei);
 
-        sample[i-1].gender=gen;
-        sample[i-1].heights=hei;
+        sample[i].gender=gen;
+        sample[i].heights=hei;
 
         i=i+1;
     }
@@ -79,36 +81,36 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-printf("Which ID's date do you want? :");
-scanf("%d",&ID2);
+     printf("Which ID's date do you want? :");
+     scanf("%d",&ID2);
 
-while (j<=num)
-{
-    if(sample[j].ID==ID2)
-    {
-        if(sample[j].gender==1)
-        {
-            printf("---\nID : %d\ngender : Male\nheights * %.2lf\n",sample[j].ID,sample[j].heights);
-        }
+    while (j<=NUM)
+     {
+        if(sample[j].ID==ID2)
+         {
+            if(sample[j].gender==1)
+              {
+                printf("---\nID : %d\ngender : Male\nheights * %.2lf\n",sample[j].ID,sample[j].heights);
+              }
+            else
+              {
+                 printf("---\nID : %d\ngender : Female\nheights : %.2f\n",sample[j].ID,sample[j].heights);
+              }  
+         }
         else
-        {
-            printf("---\nID : %d\ngender : Female\nheights : %.2f\n",sample[j].ID,sample[j].heights);
-        }  
-    }
-    else
-    {
-        k=k+1;
-    }
+          {
+            k=k+1;
+          }
 
-    j=j+1;
+        j=j+1;
 
-}
+     }
 
-if(k==j)
-{
-    printf("---\nNO date");
-}
+    if(k==j)
+      {
+        printf("---\nNO data");
+      }
 
-return 0;
+    return 0;
 
 }
