@@ -32,6 +32,7 @@ input the filename of sample:../sample/heights_female.csv
 the filename of sample: ../sample/heights_female.csv
 L_A: 0.000000
 L_B: 0.000000
+
 ## 修正履歴
 [comment #20200701]
 - このレポートの最初の部分は自分の学籍番号, 氏名にしてください. 
@@ -43,3 +44,8 @@ L_B: 0.000000
   ```
   というのがあるけれど，標準偏差は2乗してないほうの値です．
 
+
+[comment #20200728]
+- h_aやh_bなどは変数ではなく, 定数なので const double 型にするか, #defineを使いましょう.  
+ついでに変数名をもう少しわかりやすくしましょう. h や b を ave や var などに...
+- 結果はちゃんと正しい答えが出ていたので, 出力結果のところを書き換えておいてください. 
