@@ -14,7 +14,7 @@ int main(void)
     char buf[256];
     FILE* fp;
     double L1=1,L2=1;
-    double h_a=170.8,h_b=169.7,b_a=5.43,b_b=5.5;
+    const double ave_a=170.8,ave_b=169.7,var_a=pow(5.43,2),var_b=pow(5.5,2);
     double z_a,z_b;
     
     
@@ -32,8 +32,8 @@ int main(void)
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
 
-        z_a=(val-h_a)/b_a;
-        z_b=(val-h_b)/b_b;
+        z_a=(val-ave_a)/pow(var_a,0.5);
+        z_b=(val-ave_b)/pow(var_b,0.5);
 
        L1=L1*p_stdnorm(z_a);
 
