@@ -1,6 +1,6 @@
 # 課題2 レポート
 
-aa83988848 薗田光太郎
+bb35319016 河内元希
 
 ## 課題
 
@@ -28,11 +28,10 @@ c12~19:各変数の宣言
 
 c21~59:ファイルを取り込み計算し結果を出力
 ## 入出力結果
-```
-the filename of sample: ../sample/heights_male.csv
-L_A: 0.000546
-L_B: 0.000532
-```
+input the filename of sample:../sample/heights_female.csv
+the filename of sample: ../sample/heights_female.csv
+L_A: 0.000000
+L_B: 0.000000
 ## 修正履歴
 [comment #20200701]
 - このレポートの最初の部分は自分の学籍番号, 氏名にしてください. 

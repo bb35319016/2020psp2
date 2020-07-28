@@ -1,6 +1,6 @@
   # 課題2 レポート
 
-aa83988848 薗田光太郎
+bb35319016 河内元希
 
 ## 課題
 
@@ -34,10 +34,10 @@ c55~:分散を求める計算
 
 ## 入出力結果
 
-```
-Likelihood for A：
-Likelihood for B：
-```
+input the filename of sample:../sample/heights_female.csv
+the filename of sample: ../sample/heights_female.csv
+L_A: 0.000000
+L_B: 0.000000
 
 ## 修正履歴
 

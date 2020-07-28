@@ -14,7 +14,7 @@ int main(void)
     char buf[256];
     FILE* fp;
     double L1=1,L2=1;
-    double h_a=170.8,h_b=169.7,b_a=pow(5.43,2),b_b=pow(5.5,2);
+    double h_a=170.8,h_b=169.7,b_a=5.43,b_b=5.5;
     double z_a,z_b;
     
     
