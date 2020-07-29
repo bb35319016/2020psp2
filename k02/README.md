@@ -32,7 +32,6 @@ input the filename of sample:../sample/heights_female.csv
 the filename of sample: ../sample/heights_female.csv
 L_A: 0.000000
 L_B: 0.000000
-
 ## 修正履歴
 [comment #20200701]
 - このレポートの最初の部分は自分の学籍番号, 氏名にしてください. 
