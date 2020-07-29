@@ -28,10 +28,12 @@ c12~19:各変数の宣言
 
 c21~59:ファイルを取り込み計算し結果を出力
 ## 入出力結果
+```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
 L_A: 0.000006
 L_B: 0.000002
+```
 ## 修正履歴
 [comment #20200701]
 - このレポートの最初の部分は自分の学籍番号, 氏名にしてください. 
@@ -48,3 +50,7 @@ L_B: 0.000002
 - h_aやh_bなどは変数ではなく, 定数なので const double 型にするか, #defineを使いましょう.  
 ついでに変数名をもう少しわかりやすくしましょう. h や b を ave や var などに...
 - 結果はちゃんと正しい答えが出ていたので, 出力結果のところを書き換えておいてください. 
+
+
+[comment #20200729]
+- OKです

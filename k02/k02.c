@@ -6,7 +6,7 @@
 #define myPI (4*atan(1))
 
 extern double p_stdnorm(double z);
-double z;
+
 int main(void)
 {
     double val;
@@ -35,9 +35,9 @@ int main(void)
         z_a=(val-ave_a)/pow(var_a,0.5);
         z_b=(val-ave_b)/pow(var_b,0.5);
 
-       L1=L1*p_stdnorm(z_a);
+        L1=L1*p_stdnorm(z_a);
 
-       L2=L2*p_stdnorm(z_b);
+        L2=L2*p_stdnorm(z_b);
 
 
     }
