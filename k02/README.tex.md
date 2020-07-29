@@ -34,10 +34,10 @@ c55~:分散を求める計算
 
 ## 入出力結果
 
-input the filename of sample:../sample/heights_female.csv
-the filename of sample: ../sample/heights_female.csv
-L_A: 0.000000
-L_B: 0.000000
+input the filename of sample:../sample/heights_male.csv
+the filename of sample: ../sample/heights_male.csv
+L_A: 0.000006
+L_B: 0.000002
 
 ## 修正履歴
 
